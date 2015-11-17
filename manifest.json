@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Citation Scraper Plug-in",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://scholar.google.com/*"],
+      "js": [ "jquery.min.js", "popup.js" ]
+    }
+  ],
+  "background": {
+  "scripts": ["background.js"]
+}
+
+}
